@@ -1,0 +1,6 @@
+<launch>
+ <node pkg="calculator" name="add_two_ints_server"  type="add_two_ints_server" />
+ <test test-name="client_test" pkg="calculator" type="client_test" />
+
+<!-- pkg:package name,name:remapping name,type:the execulted file name -->
+</launch>

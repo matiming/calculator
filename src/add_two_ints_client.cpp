@@ -12,9 +12,9 @@ int main(int argc, char **argv)
   }
 
   ros::NodeHandle n;
-  ros::ServiceClient client = n.serviceClient<calculator::AddTwoInts>("add_two_ints");
+  ros::ServiceClient client = n.serviceClient<calculator::AddTwoInts>("add_two_ints");//The name of the service to connect to
   calculator::AddTwoInts srv;
-  srv.request.a = atoll(argv[1]);
+  srv.request.a = atoll(argv[1]); //a and b defined in srv file
   srv.request.b = atoll(argv[2]);
   if (client.call(srv))
   {
